@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda de polos de hombre - Compra online con estilo">
+  <title>Tienda de Polos Xendyf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body { background-color: #f5f5f5; color: #333; line-height: 1.6; }
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #222;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff; text-decoration: none; font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1618354691312-58ca2d3fe4e9?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 400px; display: flex; align-items: center; justify-content: center;
+      color: white; text-shadow: 1px 1px 4px black;
+    }
+    .hero h1 { font-size: 3rem; }
+    .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .products {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+    }
+    .product {
+      background: white; padding: 20px; border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img { max-width: 100%; border-radius: 10px; }
+    .product h3 { margin: 10px 0; }
+    .product button {
+      background: #111; color: white; border: none;
+      padding: 10px 20px; border-radius: 5px; cursor: pointer;
+    }
+    .carousel {
+      display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory;
+    }
+    .carousel img {
+      height: 200px; scroll-snap-align: center; border-radius: 10px;
+    }
+    iframe {
+      border: none; width: 100%; height: 500px;
+    }
+    footer {
+      background-color: #111; color: white; text-align: center;
+      padding: 20px; margin-top: 40px;
+    }
+    form input, form textarea {
+      width: 100%; padding: 10px; margin: 10px 0;
+    }
+    form button {
+      background: #222; color: white; padding: 10px 20px;
+      border: none; cursor: pointer;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>Xendyf Polos Masculinos</h1>
+    <p>Estilo | Confianza | Identidad</p>
+  </header>
+  <nav>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#videos">Reels</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#pago">Pago</a>
+  </nav>
+
+  <section class="hero" data-aos="zoom-in">
+    <h1>Viste con seguridad y elegancia</h1>
+  </section>
+
+  <section class="section" id="catalogo" data-aos="fade-up">
+    <h2>Catálogo</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/A1Xn74p.jpg" alt="Polo Negro Clásico">
+        <h3>Polo Negro Clásico</h3>
+        <p>S/. 45.00</p>
+        <button onclick="window.open('https://wa.me/51987654321?text=Hola,%20quiero%20comprar%20el%20Polo%20Negro%20Clásico')">Comprar</button>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/zT3qE9s.jpg" alt="Polo Blanco Elegante">
+        <h3>Polo Blanco Elegante</h3>
+        <p>S/. 50.00</p>
+        <button onclick="window.open('https://wa.me/51987654321?text=Hola,%20quiero%20comprar%20el%20Polo%20Blanco%20Elegante')">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="videos" data-aos="fade-up">
+    <h2>Reels / Videos</h2>
+    <iframe src="https://www.youtube.com/embed/10yJ1S5A9Eo" allowfullscreen></iframe>
+  </section>
+
+  <section class="section" id="contacto" data-aos="fade-up">
+    <h2>Contáctanos</h2>
+    <form action="https://formsubmit.co/tuemail@gmail.com" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+    </form>
+  </section>
+
+  <section class="section" id="pago" data-aos="fade-up">
+    <h2>Pago con Yape o Plin</h2>
+    <p>Escanea el código o escríbenos para coordinar el pago:</p>
+    <img src="https://i.imgur.com/9Ft0uI3.png" alt="QR de Yape" width="200">
+    <p><strong>Nombre:</strong> Xendyf Store<br><strong>Teléfono:</strong> 987654321</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Xendyf. Todos los derechos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/51987654321" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
